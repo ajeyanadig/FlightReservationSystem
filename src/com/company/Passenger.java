@@ -1,12 +1,13 @@
 package com.company;
 
 public class Passenger {
+    //attributes
     private static int idCounter;
     private int id;
-
     static {
         idCounter = 0;
     }
+    //composite Address nested class
     private static class Address {
         String street, city, state;
 
@@ -14,7 +15,7 @@ public class Passenger {
             this.street = street;
             this.city = city;
             this.state = state;
-            System.out.println(this.city);
+
         }
         public String getAddressDetails(){
             return "Contact{" +
@@ -31,7 +32,9 @@ public class Passenger {
 
         }
     }
-     private Address address;
+    private Address address; //nested class obj ref
+
+    //composite Contact nested class
 
     private static class Contact {
         String name;
@@ -58,19 +61,20 @@ public class Passenger {
 
         }
     }
-     private Contact contact;
+     private Contact contact; //nested class obj ref
 
-
+    //Constructor
 
     public Passenger(String street, String city, String state, String name, String phone, String email ){
         this.id=++idCounter;
         this.address = new Address(street, city, state);
         this.contact = new Contact(name, phone, email);
-        System.out.println(this.id);
 
 
 
     }
+
+    //Class Diagram Actions
     public Contact getContact(){
         //System.out.println(this.contact.getContactDetails());
         return this.contact;

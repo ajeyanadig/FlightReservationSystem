@@ -7,6 +7,8 @@ public class Flight {
     private int capacity;
     private int bookedSeats;
 
+    //Constructors
+
     public Flight( String flightNumber, String airline, int capacity, int bookedSeats){
         this.flightNumber=flightNumber;
         this.airline=airline;

@@ -4,10 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class Ticket {
-    public String pnr;
-
-
-
+    //Abstract class, I don't want this instantiated
+    //attributes
+    private String pnr;
     private String from;
     private String to;
     private String departureDateTime;
@@ -15,9 +14,12 @@ public abstract class Ticket {
     private String seatNo;
     private boolean cancelled;
     private float price;
+
+    //aggregation relation objects, also attributes
     public Passenger passenger;
     public Flight flight;
 
+    //Constructor
     public Ticket( String pnr,Flight flight, String from, String to, String departureDateTime, String arrivalDateTime, String seatNo, Passenger passenger, float price ){
          this.pnr=pnr;
          this.flight=flight;
@@ -29,6 +31,11 @@ public abstract class Ticket {
          this.passenger=passenger;
          this.cancelled= flight.checkAvaialability();
          this.price=price;
+    }
+
+    //needed getter
+    public String getPnr() {
+        return pnr;
     }
 
     //Class Diagram actions
