@@ -17,6 +17,8 @@ public class TouristTicket extends Ticket{
         selectedTouristLocation=new String[5];
         selectedTouristLocation[locationCount++]=location;
 
+        IN CASE OF ONE LOCATION FOR TOURIST, EXTRA CONSTRUCTOR OVERLOADING NOT REQUIRED BUT NEEDED FOR MY REFERENCE
+
     }*/
     public TouristTicket(String pnr,Flight flight, String from, String to, String departureDateTime, String arrivalDateTime, String seatNo, Passenger passenger, float price,String hotelAddress, String[] location){
         //super to pass parameters to Ticket parent class
