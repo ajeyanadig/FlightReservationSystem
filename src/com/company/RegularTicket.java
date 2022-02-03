@@ -2,7 +2,7 @@ package com.company;
 
 public class RegularTicket extends Ticket {
     //attributes
-    public String specialServices;
+    private String specialServices;
 
     //Constructor
     public RegularTicket(String pnr,Flight flight, String from, String to, String departureDateTime, String arrivalDateTime, String seatNo, Passenger passenger, float price, String specialServices){
